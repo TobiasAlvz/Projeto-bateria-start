@@ -1,34 +1,9 @@
 const buttons = document.querySelectorAll("button");
 buttons.forEach(function (button) {
-  button.addEventListener("click", handlerClick);
+  button.addEventListener("click", soundClick);
 });
-function handlerClick() {
-  alert("click");
-}
 
-function add(num1, num2) {
-  return num1 + num2;
+function soundClick() {
+  let sound = new Audio("./sounds/tom-1.mp3");
+  sound.play();
 }
-
-function sub(num1, num2) {
-  return num1 - num2;
-}
-
-function mutly(num1, num2) {
-  return num1 * num2;
-}
-
-function div(num1, num2) {
-  return num1 / num2;
-}
-
-function calculator(num1, num2, operator) {
-  return operator(num1, num2);
-}
-
-console.log(
-  calculator(10, 5, add),
-  calculator(10, 5, sub),
-  calculator(10, 5, mutly),
-  calculator(10, 5, div)
-);
