@@ -6,4 +6,5 @@ buttons.forEach(function (button) {
 function soundClick() {
   let sound = new Audio("./sounds/tom-1.mp3");
   sound.play();
+  this.style.color = "red";
 }
