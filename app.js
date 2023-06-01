@@ -8,3 +8,11 @@ function soundClick() {
   sound.play();
   this.style.color = "red";
 }
+
+const governanta = {
+  nome: "ad",
+  age: 19,
+  work: true,
+};
+
+console.log(governanta);
