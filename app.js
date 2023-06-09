@@ -5,10 +5,12 @@ buttons.forEach(function (button) {
 function soundClick() {
   let buttonInnerHTML = this.innerHTML;
   makeSounds(buttonInnerHTML);
+  buttonAnimation(buttonInnerHTML);
 }
 
 document.addEventListener("keydown", function (event) {
   makeSounds(event.key);
+  buttonAnimation(event.key);
 });
 
 function makeSounds(key) {
@@ -45,4 +47,14 @@ function makeSounds(key) {
     default:
       break;
   }
+}
+
+function buttonAnimation(currentKey) {
+  let activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
 }
