@@ -7,4 +7,3 @@ function houseKeeper(age, name, clean) {
   };
 }
 
-let houseKeeper1 = new houseKeeper(12, "Isa", ["room", "door"], fullClear());
